@@ -1,0 +1,66 @@
+@{
+    ViewData["Title"] = "Welcome";
+    var now = DateTime.Now;
+}
+
+<div class="kiosk">
+    <header class="kiosk-top">
+        <div class="lang" role="group" aria-label="Language">
+            <button type="button" class="flag is-active" aria-label="English">
+                <img src="~/images/flag_uk.GIF" alt="" />
+            </button>
+            <button type="button" class="flag" aria-label="Deutsch">
+                <img src="~/images/flag_de.GIF" alt="" />
+            </button>
+            <button type="button" class="flag" aria-label="Hrvatski">
+                <img src="~/images/flag_hr.GIF" alt="" />
+            </button>
+        </div>
+
+        <button type="button" class="logo" aria-label="IKEA">
+            <img src="~/images/IKEA_logo_RGBt.gif" alt="IKEA" />
+        </button>
+
+        <div class="clock">
+            <span class="clock-time">@now.ToString("HH:mm")</span>
+            <span class="clock-date">@now.ToString("dd.MM.yyyy")</span>
+        </div>
+    </header>
+
+    <section class="actions">
+        <button type="button" class="action-btn action-in">
+            <svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                <path d="M10 17l5-5-5-5" />
+                <path d="M15 12H3" />
+            </svg>
+            <span>Check In</span>
+        </button>
+        <button type="button" class="action-btn action-out">
+            <svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <path d="M16 17l5-5-5-5" />
+                <path d="M21 12H9" />
+            </svg>
+            <span>Check Out</span>
+        </button>
+    </section>
+
+    <p class="hint">
+        <svg class="hint-icon" viewBox="0 0 24 20" aria-hidden="true">
+            <rect x="0" y="0" width="2" height="20" />
+            <rect x="3.5" y="0" width="1" height="20" />
+            <rect x="6" y="0" width="2" height="20" />
+            <rect x="9.5" y="0" width="1" height="20" />
+            <rect x="12" y="0" width="1" height="20" />
+            <rect x="14.5" y="0" width="2.5" height="20" />
+            <rect x="18.5" y="0" width="1" height="20" />
+            <rect x="21" y="0" width="3" height="20" />
+        </svg>
+        <span>Scan <strong>BARCODE</strong> or click the <strong>IN/OUT</strong> button</span>
+    </p>
+
+    <footer class="message">
+        <p class="message-text">Welcome to IKEA</p>
+    </footer>
+</div>
